@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
         }, (error, {body}) => {
         
             if(error){
-                callback('Unable to connect to weather service!',undefined)
+                callback('Unable to connect to darksky weather service!',undefined)
             } else if (body.error) {
                 callback(body.code+':'+body.error, undefined)
             } else {
